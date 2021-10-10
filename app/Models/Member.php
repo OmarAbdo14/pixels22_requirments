@@ -12,7 +12,7 @@ class Member extends Model
         'name', 'email', 'phone', 'university', 'faculty', 'department', 'academic_year', 'facebook_profile_link',
         'living_area', 'first_question', 'second_question', 'first_preference_committee',
         'first_preference_committee_first_question', 'first_preference_committee_second_question',
-        'second_preference_committee', 'second_preference_committee_first_question',
-        'second_preference_committee_second_question',
+        'second_preference_committee',
+//        'second_preference_committee_first_question', 'second_preference_committee_second_question',
     ];
 }

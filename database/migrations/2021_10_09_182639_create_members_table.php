@@ -19,10 +19,10 @@ class CreateMembersTable extends Migration
             $table->string('email', 50);
             $table->integer('phone');
             $table->string('university', 50);
-            $table->string('faculty', 50);
+            $table->string('faculty', 50)->nullable();
             $table->string('department', 50)->nullable();
             $table->integer('academic_year');
-            $table->string('facebook_profile_link', 50);
+            $table->string('facebook_profile_link', 100);
             $table->string('living_area', 50);
             $table->string('first_question', 100);
             $table->string('second_question', 100);
@@ -30,8 +30,8 @@ class CreateMembersTable extends Migration
             $table->string('first_preference_committee_first_question', 100);
             $table->string('first_preference_committee_second_question', 100);
             $table->enum('second_preference_committee', ['IT', 'HR', 'PR', 'FR', 'AC', 'MM', 'GM', 'Proj']);
-            $table->string('second_preference_committee_first_question', 100);
-            $table->string('second_preference_committee_second_question', 100);
+//            $table->string('second_preference_committee_first_question', 100);
+//            $table->string('second_preference_committee_second_question', 100);
             $table->timestamps();
         });
     }

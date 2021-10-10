@@ -2,9 +2,10 @@
 @section('title', 'Members')
 @section('content')
    @if(count($members)>=1)
-       <table class="table">
+       <table class="table table-striped bg-light w-75 mx-auto my-5 text-center">
            <thead>
            <tr>
+               <th scope="col"></th>
                <th scope="col">Name</th>
                <th scope="col">University</th>
                <th scope="col">Faculty</th>
@@ -16,7 +17,7 @@
            <tbody>
            @foreach($members as $key=>$member)
                <tr data-bs-toggle="modal" data-bs-target="#exampleModal">
-                   <th scope="row">{{$key}}</th>
+                   <th scope="row">{{$key+1}}</th>
                    <td>{{$member->name}}</td>
                    <td>{{$member->university}}</td>
                    <td>{{$member->faculty}}</td>
@@ -28,6 +29,6 @@
            </tbody>
        </table>
    @else
-       <h1 class="position-absolute text-center w-100" style="top:50%">There is not any applications</h1>
+       <h1 class="text-center text-info my-5">There is not any applications</h1>
    @endif
 @endsection

@@ -13,8 +13,8 @@ class MembersController extends Controller
         'email'                                          =>['required', 'string'],
         'phone'                                          =>['required', 'digits:11'],
         'university'                                     =>['required', 'string'],
-        'faculty'                                        =>['required', 'string'],
-        'department'                                     =>['required', 'string'],
+        'faculty'                                        =>['nullable', 'string'],
+        'department'                                     =>['nullable', 'string'],
         'academic_year'                                  =>['required', 'integer'],
         'facebook_profile_link'                          =>['required', 'string'],
         'living_area'                                    =>['required', 'string'],
@@ -24,8 +24,8 @@ class MembersController extends Controller
         'first_preference_committee_first_question'      =>['required', 'string'],
         'first_preference_committee_second_question'     =>['required', 'string'],
         'second_preference_committee'                    =>['required', 'string'],
-        'second_preference_committee_first_question'     =>['required', 'string'],
-        'second_preference_committee_second_question'    =>['required', 'string'],
+//        'second_preference_committee_first_question'     =>['required', 'string'],
+//        'second_preference_committee_second_question'    =>['required', 'string'],
     ];
 
     public $messages = [
@@ -59,10 +59,10 @@ class MembersController extends Controller
         'first_preference_committee_second_question.string'              =>'Field must be a string',
         'second_preference_committee.required'                           =>'Field is required',
         'second_preference_committee.string'                             =>'Field must be a string',
-        'second_preference_committee_first_question.required'            =>'Field is required',
-        'second_preference_committee_first_question.string'              =>'Field must be a string',
-        'second_preference_committee_second_question.required'           =>'Field must be a string',
-        'second_preference_committee_second_question.string'             =>'Field must be a string',
+//        'second_preference_committee_first_question.required'            =>'Field is required',
+//        'second_preference_committee_first_question.string'              =>'Field must be a string',
+//        'second_preference_committee_second_question.required'           =>'Field must be a string',
+//        'second_preference_committee_second_question.string'             =>'Field must be a string',
 
     ];
 
@@ -78,11 +78,12 @@ class MembersController extends Controller
     public function addMember(Request $request) {
         $validator = Validator::make($request->all(), $this->roles, $this->messages);
         if($validator->fails()) {
-            return redirect('/members/addMemberForm')->withErrors($validator, 'memberErrors');
+//            dd($validator);
+            return redirect('/members/addMemberForm')->withInput($request->all())->withErrors($validator);
         }
+//        dd($request);
+
         $member = Member::create($request->all());
-        if($member) {
-            return view('success', ['success'=>'Your application has been added successfully']);
-        }
+        return redirect()->back()->withSuccess('Your application has been added successfully');
     }
 }
