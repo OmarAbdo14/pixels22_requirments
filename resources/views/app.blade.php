@@ -11,7 +11,7 @@
         <header class="position-relative">
             <nav class="navbar navbar-expand-lg navbar-dark py-3 bg-dark position-fixed w-100">
                 <div class="container-fluid">
-                    <img style="width: 160px;resize: both" src="{{asset('./images/games.png')}}" />
+                    <img style="width: calc(80px + 6vw);resize: both" src="{{asset('./images/games.png')}}" />
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>

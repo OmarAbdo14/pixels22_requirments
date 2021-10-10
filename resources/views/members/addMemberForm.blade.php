@@ -147,7 +147,7 @@
                 @enderror
             </div>
 
-            <button type="submit" class="btn btn-primary w-25 py-3 d-block mx-auto">Submit</button>
+            <button type="submit" class="btn btn-primary w-25 py-3 w-100 d-block mx-auto text-center" style="font-size: calc(10px + 0.6vw);">Submit</button>
         </form>
     @endif
 
