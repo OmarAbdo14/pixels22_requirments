@@ -197,8 +197,8 @@
                     firstCommitteeSecondQuestion.innerHTML = `What is your expectation about Geeky media? <span class="text-danger">*</span>`;
                     break;
                 case 'Proj':
-                    firstCommitteeFirstQuestion.innerHTML = `a <span class="text-danger">*</span>`;
-                    firstCommitteeSecondQuestion.innerHTML = `a <span class="text-danger">*</span>`;
+                    firstCommitteeFirstQuestion.innerHTML = `What field are you most interested in? (choose between: Robotics-mechanics, Robotics-control, Programming ) <span class="text-danger">*</span>`;
+                    firstCommitteeSecondQuestion.innerHTML = `What are your technical skills, and what are your previous experiences? <span class="text-danger">*</span>`;
                     break;
             }
         });
