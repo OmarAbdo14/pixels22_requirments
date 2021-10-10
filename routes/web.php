@@ -15,10 +15,9 @@ use App\Http\Controllers\MembersController;
 */
 
 Route::group(['prefix'=>'/members'], function () {
-    Route::get('/all', [MembersController::class, 'showAllMembers'])->name('showAllMembers');
-    Route::get('/member/{id}', [MembersController::class, 'showAllMembers'])->name('showAllMembers');
-    Route::get('/addMemberForm', [MembersController::class, 'showAddMemberForm'])->name('showAddMemberForm');
-    Route::post('/addMember', [MembersController::class, 'addMember'])->name('addMember');
+    Route::get('/all', 'MembersController@showAllMembers')->name('showAllMembers');
+    Route::get('/addMemberForm', 'MembersController@showAddMemberForm')->name('showAddMemberForm');
+    Route::post('/addMember', 'MembersController@addMember')->name('addMember');
 });
 //Route::get('/success', function () {
 //    return view('success');
