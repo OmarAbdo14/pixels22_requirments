@@ -83,7 +83,7 @@
 
             <div class="mb-3">
                 <label for="first_question" class="form-label text-capitalize font-weight-bold" style="color: #4d9dc0; font-size: calc(10px + 0.9vw);">What do you know about Pixels? <span class="text-danger">*</span></label>
-                <input value="{{old('first_question')}}" type="text" class="form-control" id="first_question" name="first_question" placeholder="Enter your answer"/>
+                <textarea value="{{old('first_question')}}" class="form-control" id="first_question" name="first_question" placeholder="Enter your answer">{{old('first_question')}}</textarea>
                 @error('first_question')
                 <span class="text-danger">{{$message}}</span>
                 @enderror
@@ -108,7 +108,7 @@
 
             <div class="mb-3" style="display: none;">
                 <label for="second_question" class="form-label text-capitalize font-weight-bold" style="color: #4d9dc0; font-size: calc(10px + 0.9vw);">Why do you want to join this committee? <span class="text-danger">*</span></label>
-                <input value="{{old('second_question')}}" type="text" class="form-control" id="second_question" name="second_question" placeholder="Enter your answer">
+                <textarea value="{{old('second_question')}}" class="form-control" id="second_question" name="second_question" placeholder="Enter your answer">{{old('second_question')}}</textarea>
                 @error('second_question')
                 <span class="text-danger">{{$message}}</span>
                 @enderror
@@ -116,7 +116,7 @@
 
             <div class="mb-3" style="display: none;">
                 <label for="first_preference_committee_first_answer" id="first_preference_committee_first_question" class="form-label text-capitalize font-weight-bold" style="color: #4d9dc0; font-size: calc(10px + 0.9vw);"></label>
-                <input value="{{old('first_preference_committee_first_question')}}" type="text" class="form-control" id="first_preference_committee_first_answer" name="first_preference_committee_first_question" placeholder="Enter your answer">
+                <textarea value="{{old('first_preference_committee_first_question')}}" class="form-control" id="first_preference_committee_first_question" name="first_preference_committee_first_question" placeholder="Enter your answer">{{old('first_preference_committee_first_question')}}</textarea>
                 @error('first_preference_committee_first_question')
                 <span class="text-danger">{{$message}}</span>
                 @enderror
@@ -124,7 +124,7 @@
 
             <div class="mb-3" style="display: none;">
                 <label for="first_preference_committee_second_answer" id="first_preference_committee_second_question" class="form-label text-capitalize font-weight-bold" style="color: #4d9dc0; font-size: calc(10px + 0.9vw);"></label>
-                <input value="{{old('first_preference_committee_second_question')}}" type="text" class="form-control" id="first_preference_committee_second_answer" name="first_preference_committee_second_question" placeholder="Enter your answer"/>
+                <textarea value="{{old('first_preference_committee_second_question')}}" class="form-control" id="first_preference_committee_second_question" name="first_preference_committee_second_question" placeholder="Enter your answer">{{old('first_preference_committee_second_question')}}</textarea>
                 @error('first_preference_committee_second_question')
                 <span class="text-danger">{{$message}}</span>
                 @enderror
